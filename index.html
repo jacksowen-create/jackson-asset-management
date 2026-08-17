@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jackson Asset Management | Corporate Housing & Serviced Accommodation</title>
     <style>
+        /* Smooth Scrolling Configuration */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Exact Screenshot Colorway & High Contrast Reset */
         * {
             margin: 0;
@@ -13,15 +18,11 @@
             font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             background-color: #000000; /* Pure Black Background */
             color: #ffffff;            /* High Contrast White Text */
             line-height: 1.6;
-            overflow-x: hidden;        /* Strict defense against side-scrolling glitch */
+            overflow-x: hidden;        /* Prevents iPhone Safari sideways layout glitch */
         }
 
         /* Top Navigation Header matching your image layout */
@@ -68,9 +69,9 @@
             color: #d4af37;
         }
 
-        /* Balanced, Clean Hero Section */
+        /* Tightened Hero Layout: Removed huge vertical padding */
         .hero {
-            padding: 6rem 5%; /* Tight, professional gap below header */
+            padding: 5rem 5% 4rem 5%; /* Tighter spacing below header */
             text-align: center;
             max-width: 1000px;
             margin: 0 auto;
@@ -190,7 +191,7 @@
             display: inline-block;
         }
 
-        /* Industry Seasoned Compliance verification block */
+        /* Industry Seasoned Operations block */
         .compliance-section {
             background-color: #050505;
             padding: 6rem 5%;
@@ -206,7 +207,7 @@
             text-align: center;
         }
 
-        /* Mobile-Safe Email Wrapper */
+        /* Non-Clickable Email Box Design */
         .email-box {
             display: inline-block;
             margin-top: 2rem;
@@ -218,8 +219,8 @@
             letter-spacing: 1px;
             user-select: text;
             cursor: default;
-            max-width: 100%;
-            word-wrap: break-word;
+            max-width: 100%;       
+            word-wrap: break-word;  
         }
 
         footer {
@@ -232,39 +233,38 @@
             letter-spacing: 0.5px;
         }
 
-        /* Strict Responsive Layout Controls */
+        /* Clean Mobile View scaling */
         @media (max-width: 768px) {
             nav {
                 padding: 1.5rem 5%;
-                justify-content: center; /* Perfectly centers your logo on mobile screen widths */
             }
             .nav-links { 
-                display: none; /* Safely hides mobile menu block to prevent alignment clipping */
+                display: none; 
             }
             .hero {
-                padding: 4rem 5%; /* Tight centered header layout */
+                padding: 3.5rem 5% 3.5rem 5%; 
             }
             .hero h1 { 
-                font-size: 2.1rem; /* Fits full screen width without breaks */
+                font-size: 2.2rem; 
             }
             .hero p {
-                font-size: 1.05rem;
+                font-size: 1.1rem;
             }
             .section-header h2 {
                 font-size: 1.8rem;
             }
             .location-tags {
-                flex-direction: column; /* Force clean vertical stack layout on small screens */
+                flex-direction: column; 
                 align-items: center;
                 gap: 1rem;
             }
             .tag {
-                width: 80%; /* Consistent centered block style elements */
+                width: 80%; 
                 padding: 0.85rem 0;
                 font-size: 1rem;
             }
             .email-box {
-                font-size: 0.95rem; /* Clean inline text fitting for Safari mobile viewports */
+                font-size: 0.95rem; 
                 padding: 1rem 1.25rem;
             }
         }
@@ -281,7 +281,7 @@
         </ul>
     </nav>
 
-    <!-- Main Value Hero -->
+    <!-- Main Value Hero with Tightened Margins -->
     <section class="hero">
         <h1>Guaranteed Rent. <span>Premium Corporate Housing.</span></h1>
         <p>We solve landlord void periods by securing high-end corporate lets for contractors, business operators, and relocating working professionals across our premium network.</p>
@@ -322,5 +322,11 @@
         </div>
     </section>
 
-    <!-- Fixed/Restored Compliance Block Section -->
-
+    <!-- Accountable Operations Section between Locations and Email Box -->
+    <section id="compliance" class="compliance-section">
+        <div class="section-header">
+            <p>Professional Standards</p>
+            <h2>Accountable Real Estate Management</h2>
+        </div>
+        <div class="grid">
+            <div class="card" style="margin: 0 auto; max-width: 600px;">
