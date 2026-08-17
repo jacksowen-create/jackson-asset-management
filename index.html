@@ -3,354 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson Asset Management | Corporate Housing Solutions</title>
+    <title>Jackson Asset Management | Corporate Housing & Serviced Accommodation</title>
     <style>
-        :root {
-            --slate-black: #0F1115; /* Premium Institutional Foundation */
-            --charcoal-grey: #1C1F26; /* Bento Box Backgrounds */
-            --brushed-gold: #D4AF37; /* Corporate Trust Highlight */
-            --muted-gold: #AA841B;
-            --pure-white: #FFFFFF;
-            --text-body: #94A3B8;
-            --border-gold: rgba(212, 175, 55, 0.2);
-        }
-
+        /* Exact Screenshot Colorway & High Contrast Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
         body {
-            background-color: var(--slate-black);
-            color: var(--pure-white);
-            overflow-x: hidden;
+            background-color: #000000; /* Pure Black Background */
+            color: #ffffff;            /* High Contrast White Text */
+            line-height: 1.6;
         }
 
-        /* Fixed Navigation Header */
-        header {
-            background-color: rgba(15, 17, 21, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-gold);
-            padding: 1.25rem 8%;
+        /* Top Navigation Header matching your image layout */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 5%;
+            background-color: #000000;
+            border-bottom: 1px solid #111111;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
         .logo {
-            font-size: 1.25rem;
-            font-weight: 800;
+            font-size: 1.35rem;
+            font-weight: 800; /* Extra Bold */
             letter-spacing: 2px;
-            color: var(--pure-white);
             text-transform: uppercase;
         }
 
         .logo span {
-            color: var(--brushed-gold);
-            font-weight: 300;
+            color: #d4af37; /* Exact Brand Gold/Amber Accent */
         }
 
-        nav a {
-            color: var(--text-body);
-            text-decoration: none;
-            margin-left: 2.5rem;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--brushed-gold);
-        }
-
-        /* Cinema Quality Looping Background Showcase */
-        .hero-viewport {
-            position: relative;
-            height: 75vh;
+        .nav-links {
             display: flex;
-            align-items: center;
-            padding: 0 8%;
-            background-color: #050709;
-            overflow: hidden;
+            list-style: none;
+            gap: 2.5rem;
         }
 
-        /* High-Definition Architecture Loop - Guaranteed Cross-Browser Delivery */
-        .hero-video-render {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            opacity: 0.35;
-        }
-
-        .hero-shading-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(15,17,21,0.98) 35%, rgba(15,17,21,0.5) 100%);
-            z-index: 2;
-        }
-
-        .hero-text-stack {
-            position: relative;
-            z-index: 3;
-            max-width: 850px;
-        }
-
-        .market-badge {
-            color: var(--brushed-gold);
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
             text-transform: uppercase;
-            font-weight: 700;
             font-size: 0.85rem;
-            letter-spacing: 3px;
-            margin-bottom: 1.25rem;
-            display: inline-block;
-            border: 1px solid var(--border-gold);
-            padding: 0.35rem 0.75rem;
-            background: rgba(212, 175, 55, 0.05);
+            letter-spacing: 1.5px;
+            font-weight: 700; /* Crisp Bold Links */
+            transition: color 0.2s ease;
         }
 
-        .hero-text-stack h1 {
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+
+        /* Bold Hero Statement */
+        .hero {
+            padding: 10rem 5% 7rem 5%;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
             font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
+            font-weight: 900; /* Maximum Boldness for High Impact */
             margin-bottom: 1.5rem;
-        }
-
-        .hero-text-stack p {
-            font-size: 1.2rem;
-            color: var(--text-body);
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        .action-link-gold {
-            background: linear-gradient(135deg, var(--brushed-gold) 0%, var(--muted-gold) 100%);
-            color: var(--slate-black);
-            padding: 1.1rem 2.5rem;
-            border-radius: 2px;
-            text-decoration: none;
-            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.85rem;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cccccc; /* Clear Off-White readable paragraph text */
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+        }
+
+        .cta-btn {
+            background-color: #d4af37;
+            color: #000000;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 800; /* Ultra Bold Button Text */
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            border-radius: 2px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
             display: inline-block;
         }
 
-        .action-link-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+        .cta-btn:hover {
+            background-color: #ffffff;
+            transform: scale(1.02);
         }
 
-        /* Corporate Architecture Bento Grid */
-        .content-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 6rem 8%;
+        /* Structured Framework Section */
+        .services {
+            background-color: #050505;
+            padding: 6rem 5%;
+            border-top: 1px solid #111111;
         }
 
-        .heading-block {
-            margin-bottom: 4.5rem;
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
         }
 
-        .heading-block h2 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.75rem;
-        }
-
-        .heading-block p {
-            color: var(--brushed-gold);
+        .section-header p {
+            color: #d4af37;
             text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-        }
-
-        .bento-layout {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .bento-item {
-            background-color: var(--charcoal-grey);
-            border: 1px solid rgba(255,255,255,0.02);
-            padding: 3rem;
-            border-radius: 4px;
-            transition: border-color 0.3s;
-        }
-
-        .bento-item:hover {
-            border-color: var(--brushed-gold);
-        }
-
-        .bento-item.span-two {
-            grid-column: span 2;
-        }
-
-        .bento-item h3 {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 1.25rem;
-            color: var(--pure-white);
-        }
-
-        .bento-item h3 span {
-            color: var(--brushed-gold);
-        }
-
-        .bento-item p {
-            color: var(--text-body);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* Strict Regulatory & Governance Banner */
-        .regulatory-panel {
-            background-color: #13151A;
-            border-top: 1px solid var(--border-gold);
-            border-bottom: 1px solid var(--border-gold);
-            padding: 5rem 8%;
-        }
-
-        .regulatory-wrapper {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 4rem;
-        }
-
-        .regulatory-text h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .regulatory-text p {
-            color: var(--text-body);
-            font-size: 1.05rem;
-            max-width: 600px;
-        }
-
-        .governance-badges {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-        }
-
-        .badge-element {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.04);
-            padding: 1.25rem;
-            border-left: 3px solid var(--brushed-gold);
-            font-weight: 600;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Institutional Footprint & Communication Channels */
-        footer {
-            background-color: var(--slate-black);
-            padding: 6rem 8% 3rem 8%;
-            border-top: 1px solid rgba(255,255,255,0.01);
-        }
-
-        .footer-layout {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            padding-bottom: 4rem;
-        }
-
-        .footer-identity h2 {
-            font-size: 1.6rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .footer-identity p {
-            color: var(--text-body);
-            max-width: 550px;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .footer-channel h4 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--brushed-gold);
-            margin-bottom: 1.25rem;
-        }
-
-        .footer-channel p {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
-        .legal-row {
-            max-width: 1400px;
-            margin: 0 auto;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 2rem;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: #4B5563;
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-transform: uppercase;
         }
 
-        @media (max-width: 1024px) {
-            .bento-layout { grid-template-columns: 1fr; }
-            .bento-item.span-two { grid-column: span 1; }
-            .regulatory-wrapper { flex-direction: column; align-items: flex-start; }
-            .footer-layout { grid-template-columns: 1fr; }
-            .hero-text-stack h1 { font-size: 2.5rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #000000;
+            padding: 3rem 2rem;
+            border-radius: 4px;
+            border: 2px solid #111111; /* Clean high-contrast borders */
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #d4af37;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card p {
+            color: #aaaaaa;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        /* Regional Operations Block */
+        .locations {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .location-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .tag {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: 0px; /* Sharp Corporate Edges */
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #d4af37;
+        }
+
+        /* Lead Capture Section */
+        .contact {
+            background-color: #050505;
+            padding: 6rem 5%;
+            border-top: 1px solid #111111;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-form input, .contact-form textarea {
+            background-color: #000000;
+            border: 2px solid #222222;
+            color: #ffffff;
+            padding: 1.25rem;
+            font-size: 1rem;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        .submit-btn {
+            background-color: #d4af37;
+            color: #000000;
+            border: none;
+            padding: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-size: 0.85rem;
+            color: #444444;
+            border-top: 1px solid #111111;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Breakpoint scaling */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">Jackson <span>Asset Management</span></div>
-            <nav>
-                <a href="#propositions">Framework</a>
-                <a href="#governance">Compliance</a>
-                <a href="#corporate">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Navigation Grid -->
+    <nav>
+        <div class="logo">Jackson Asset <span>Management</span></div>
+        <ul class="nav-links">
+            <li><a href="#framework">Framework</a></li>
+            <li><a href="#compliance">Compliance</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- Video loop wrapper built to force continuous cross-device play state -->
-    <section class="hero-viewport">
-        <video class="hero-video-render" autoplay loop muted playsinline preload="auto">
+    <!-- Main Value Hero -->
+    <section class="hero">
+        <h1>Guaranteed Rent. <span>Premium Corporate Housing.</span></h1>
+        <p>We solve landlord void periods by securing high-end corporate lets for contractors, business operators, and relocating working professionals across our premium network.</p>
+        <a href="#contact" class="cta-btn">Acquire Corporate Lease</a>
+    </section>
+
+    <!-- Core Corporate Value Proposition -->
+    <section id="framework" class="services">
+        <div class="section-header">
+            <p>Professional Operations</p>
+            <h2>The Corporate Letting Framework</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>The Landlord Problem Solved</h3>
+                <p>We take complete operational control of properties under fixed long-term agreements. Landlords receive 100% guaranteed monthly rent, zero tenant-finding fees, and completely hands-off asset upkeep.</p>
+            </div>
+            <div class="card">
+                <h3>Our Target Occupants</h3>
+                <p>We serve corporate clients, traveling field contractors, and blue-chip professionals needing premium Serviced Accommodation (SA). Every stay is fully vetted, monitored, and kept to executive standards.</p>
+            </div>
+            <div class="card">
+                <h3>Luxury Maintenance Model</h3>
+                <p>Properties are regularly deep-cleaned by our professional teams and kept in pristine showroom presentation. We manage internal minor wear-and-tear tasks at zero cost to the property owner.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Operating Map -->
+    <section class="locations">
+        <div class="section-header">
+            <p>Strategic Presence</p>
+            <h2>Key Regions of Operation</h2>
+        </div>
+        <div class="location-tags">
+            <div class="tag">Sheffield</div>
+            <div class="tag">Derby</div>
+            <div class="tag">Manchester</div>
+        </div>
+    </section>
+
+    <!-- Industry Seasoned Compliance verification block -->
+    <section id="compliance" class="services">
+        <div class="section-header">
+            <p>Risk Management</p>
+            <h2>Fully Vetted & Regulated Asset Control</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Legislative Compliance</h3>
