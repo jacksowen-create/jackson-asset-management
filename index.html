@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jackson Asset Management | Corporate Housing & Serviced Accommodation</title>
     <style>
-        /* Smooth Scrolling Configuration */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Exact Screenshot Colorway & High Contrast Reset */
         * {
             margin: 0;
             padding: 0;
@@ -19,12 +13,11 @@
         }
 
         body {
-            background-color: #000000; /* Pure Black Background */
-            color: #ffffff;            /* High Contrast White Text */
+            background-color: #000000;
+            color: #ffffff;
             line-height: 1.6;
         }
 
-        /* Top Navigation Header matching your image layout */
         nav {
             display: flex;
             justify-content: space-between;
@@ -39,13 +32,13 @@
 
         .logo {
             font-size: 1.35rem;
-            font-weight: 800; /* Extra Bold */
+            font-weight: 800;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
         .logo span {
-            color: #d4af37; /* Exact Brand Gold/Amber Accent */
+            color: #d4af37;
         }
 
         .nav-links {
@@ -60,7 +53,7 @@
             text-transform: uppercase;
             font-size: 0.85rem;
             letter-spacing: 1.5px;
-            font-weight: 700; /* Crisp Bold Links */
+            font-weight: 700;
             transition: color 0.2s ease;
         }
 
@@ -68,7 +61,6 @@
             color: #d4af37;
         }
 
-        /* Bold Hero Statement */
         .hero {
             padding: 12rem 5% 9rem 5%;
             text-align: center;
@@ -78,7 +70,7 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            font-weight: 900; /* Maximum Boldness for High Impact */
+            font-weight: 900;
             margin-bottom: 1.5rem;
             line-height: 1.2;
             letter-spacing: -0.5px;
@@ -91,14 +83,13 @@
 
         .hero p {
             font-size: 1.25rem;
-            color: #cccccc; /* Clear Off-White readable paragraph text */
+            color: #cccccc;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 500;
         }
 
-        /* Structured Framework Section */
         .services {
             background-color: #050505;
             padding: 6rem 5%;
@@ -138,7 +129,7 @@
             background-color: #000000;
             padding: 3rem 2rem;
             border-radius: 4px;
-            border: 2px solid #111111; /* Clean high-contrast borders */
+            border: 2px solid #111111;
             transition: border-color 0.3s ease;
         }
 
@@ -161,7 +152,6 @@
             font-weight: 400;
         }
 
-        /* Regional Operations Block */
         .locations {
             padding: 6rem 5%;
             max-width: 1200px;
@@ -181,7 +171,6 @@
             background-color: #000000;
             color: #ffffff;
             padding: 1rem 2.5rem;
-            border-radius: 0px; /* Sharp Corporate Edges */
             font-size: 1.1rem;
             font-weight: 800;
             text-transform: uppercase;
@@ -189,7 +178,6 @@
             border: 2px solid #d4af37;
         }
 
-        /* Industry Seasoned Compliance verification block */
         .compliance-section {
             background-color: #050505;
             padding: 6rem 5%;
@@ -197,7 +185,6 @@
             text-align: center;
         }
 
-        /* Direct Contact Information Box */
         .direct-contact {
             background-color: #000000;
             padding: 10rem 5%;
@@ -205,7 +192,6 @@
             text-align: center;
         }
 
-        /* Fixed Design Box: Keeps look exact but disables interaction/hover shifts */
         .email-box {
             display: inline-block;
             margin-top: 2rem;
@@ -215,7 +201,7 @@
             font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: 1px;
-            user-select: text; /* Allows clients to highlight and copy manually */
+            user-select: text;
             cursor: default;
         }
 
@@ -229,7 +215,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Responsive Breakpoint scaling */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
@@ -238,23 +223,19 @@
 </head>
 <body>
 
-    <!-- Header Navigation Grid -->
     <nav>
         <div class="logo">Jackson Asset <span>Management</span></div>
         <ul class="nav-links">
             <li><a href="#framework">Framework</a></li>
-            <li><a href="#compliance">Compliance</a></li>
-            <!-- Contact link entirely removed from here -->
+            <li><a href="#compliance">Operations</a></li>
         </ul>
     </nav>
 
-    <!-- Main Value Hero without Action Buttons -->
     <section class="hero">
         <h1>Guaranteed Rent. <span>Premium Corporate Housing.</span></h1>
         <p>We solve landlord void periods by securing high-end corporate lets for contractors, business operators, and relocating working professionals across our premium network.</p>
     </section>
 
-    <!-- Core Corporate Value Proposition -->
     <section id="framework" class="services">
         <div class="section-header">
             <p>Professional Operations</p>
@@ -276,7 +257,6 @@
         </div>
     </section>
 
-    <!-- Regional Operating Map -->
     <section class="locations">
         <div class="section-header">
             <p>Strategic Presence</p>
@@ -289,30 +269,32 @@
         </div>
     </section>
 
-    <!-- Industry Seasoned Compliance verification block -->
     <section id="compliance" class="compliance-section">
         <div class="section-header">
-            <p>Risk Management</p>
-            <h2>Fully Vetted & Regulated Asset Control</h2>
+            <p>Professional Standards</p>
+            <h2>Accountable Real Estate Management</h2>
         </div>
         <div class="grid">
             <div class="card" style="margin: 0 auto; max-width: 600px;">
-                <h3>Legislative Compliance</h3>
-                <p>Operating transparently with full UK AML regulations, information safety framework registration, and dedicated corporate protection policies to manage luxury assets safely.</p>
+                <h3>Operational Best Practices</h3>
+                <p>Jackson Asset Management operates entirely within the UK data storage and independent property ombudsman processing frameworks. We maintain extensive corporate liability protections across all active contracts.</p>
             </div>
         </div>
     </section>
 
-    <!-- Dedicated Direct Corporate Contact Area -->
-    <section id="contact-section" class="direct-contact">
+    <section class="direct-contact">
         <div class="section-header">
             <p>Direct Procurement</p>
             <h2>Connect With Our Portfolio Management</h2>
         </div>
-        <!-- Absolute plain text text box, completely non-clickable link -->
         <div class="email-box">
             owen@jacksonassetmanagement.co.uk
         </div>
     </section>
 
     <footer>
+        <p>&copy; 2026 JACKSON ASSET MANAGEMENT. ALL RIGHTS RESERVED. COMPANY PORTFOLIO OPERATIONS.</p>
+    </footer>
+
+</body>
+</html>
