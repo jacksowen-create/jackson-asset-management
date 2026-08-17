@@ -65,7 +65,7 @@
 
         /* Bold Hero Statement */
         .hero {
-            padding: 10rem 5% 7rem 5%;
+            padding: 12rem 5% 9rem 5%;
             text-align: center;
             max-width: 1000px;
             margin: 0 auto;
@@ -87,30 +87,10 @@
         .hero p {
             font-size: 1.25rem;
             color: #cccccc; /* Clear Off-White readable paragraph text */
-            margin-bottom: 3rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 500;
-        }
-
-        .cta-btn {
-            background-color: #d4af37;
-            color: #000000;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            font-weight: 800; /* Ultra Bold Button Text */
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1.5px;
-            border-radius: 2px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            display: inline-block;
-        }
-
-        .cta-btn:hover {
-            background-color: #ffffff;
-            transform: scale(1.02);
         }
 
         /* Structured Framework Section */
@@ -204,51 +184,40 @@
             border: 2px solid #d4af37;
         }
 
-        /* Lead Capture Section */
-        .contact {
+        /* Industry Seasoned Compliance verification block */
+        .compliance-section {
             background-color: #050505;
             padding: 6rem 5%;
             border-top: 1px solid #111111;
             text-align: center;
         }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 3rem auto 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-form input, .contact-form textarea {
+        /* Direct Contact Information Box */
+        .direct-contact {
             background-color: #000000;
-            border: 2px solid #222222;
+            padding: 6rem 5%;
+            border-top: 1px solid #111111;
+            text-align: center;
+        }
+
+        .email-box {
+            display: inline-block;
+            margin-top: 2rem;
+            border: 2px solid #d4af37;
+            padding: 1.5rem 3rem;
+        }
+
+        .email-box a {
             color: #ffffff;
-            padding: 1.25rem;
-            font-size: 1rem;
-            width: 100%;
-            font-weight: 600;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
         }
 
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline: none;
-            border-color: #d4af37;
-        }
-
-        .submit-btn {
-            background-color: #d4af37;
-            color: #000000;
-            border: none;
-            padding: 1.25rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #ffffff;
+        .email-box a:hover {
+            color: #d4af37;
         }
 
         footer {
@@ -276,15 +245,14 @@
         <ul class="nav-links">
             <li><a href="#framework">Framework</a></li>
             <li><a href="#compliance">Compliance</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:owen@jacksonassetmanagement.co.uk">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Value Hero -->
+    <!-- Main Value Hero without Action Buttons -->
     <section class="hero">
         <h1>Guaranteed Rent. <span>Premium Corporate Housing.</span></h1>
         <p>We solve landlord void periods by securing high-end corporate lets for contractors, business operators, and relocating working professionals across our premium network.</p>
-        <a href="#contact" class="cta-btn">Acquire Corporate Lease</a>
     </section>
 
     <!-- Core Corporate Value Proposition -->
@@ -323,11 +291,33 @@
     </section>
 
     <!-- Industry Seasoned Compliance verification block -->
-    <section id="compliance" class="services">
+    <section id="compliance" class="compliance-section">
         <div class="section-header">
             <p>Risk Management</p>
             <h2>Fully Vetted & Regulated Asset Control</h2>
         </div>
         <div class="grid">
-            <div class="card">
+            <div class="card" style="margin: 0 auto; max-width: 600px;">
                 <h3>Legislative Compliance</h3>
+                <p>Operating transparently with full UK AML regulations, information safety framework registration, and dedicated corporate protection policies to manage luxury assets safely.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Direct Corporate Contact Area -->
+    <section class="direct-contact">
+        <div class="section-header">
+            <p>Direct Procurement</p>
+            <h2>Connect With Our Portfolio Management</h2>
+        </div>
+        <div class="email-box">
+            <a href="mailto:owen@jacksonassetmanagement.co.uk">owen@jacksonassetmanagement.co.uk</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 JACKSON ASSET MANAGEMENT. ALL RIGHTS RESERVED. COMPANY PORTFOLIO OPERATIONS.</p>
+    </footer>
+
+</body>
+</html>
