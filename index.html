@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jackson Asset Management | Corporate Housing & Serviced Accommodation</title>
     <style>
+        /* Smooth Scrolling Configuration */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Exact Screenshot Colorway & High Contrast Reset */
         * {
             margin: 0;
@@ -195,29 +200,23 @@
         /* Direct Contact Information Box */
         .direct-contact {
             background-color: #000000;
-            padding: 6rem 5%;
+            padding: 10rem 5%; /* Increased padding for comfortable scrolling target */
             border-top: 1px solid #111111;
             text-align: center;
         }
 
+        /* Fixed Design Box: Keeps look exact but disables interaction/hover shifts */
         .email-box {
             display: inline-block;
             margin-top: 2rem;
             border: 2px solid #d4af37;
             padding: 1.5rem 3rem;
-        }
-
-        .email-box a {
             color: #ffffff;
             font-size: 1.5rem;
             font-weight: 800;
-            text-decoration: none;
             letter-spacing: 1px;
-            transition: color 0.2s ease;
-        }
-
-        .email-box a:hover {
-            color: #d4af37;
+            user-select: text; /* Allows clients to highlight and copy manually */
+            cursor: default;
         }
 
         footer {
@@ -245,7 +244,7 @@
         <ul class="nav-links">
             <li><a href="#framework">Framework</a></li>
             <li><a href="#compliance">Compliance</a></li>
-            <li><a href="mailto:owen@jacksonassetmanagement.co.uk">Contact</a></li>
+            <li><a href="#contact-target">Contact</a></li> <!-- Smooth Anchor Scroll Link -->
         </ul>
     </nav>
 
@@ -305,19 +304,15 @@
     </section>
 
     <!-- Dedicated Direct Corporate Contact Area -->
-    <section class="direct-contact">
+    <section id="contact-target" class="direct-contact">
         <div class="section-header">
             <p>Direct Procurement</p>
             <h2>Connect With Our Portfolio Management</h2>
         </div>
+        <!-- Non-clickable style matching previous layout design -->
         <div class="email-box">
-            <a href="mailto:owen@jacksonassetmanagement.co.uk">owen@jacksonassetmanagement.co.uk</a>
+            owen@jacksonassetmanagement.co.uk
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 JACKSON ASSET MANAGEMENT. ALL RIGHTS RESERVED. COMPANY PORTFOLIO OPERATIONS.</p>
-    </footer>
-
-</body>
-</html>
