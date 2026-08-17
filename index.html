@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jackson Asset Management | Corporate Housing & Serviced Accommodation</title>
     <style>
-        /* Smooth Scrolling Configuration */
-        html {
-            scroll-behavior: smooth;
-        }
-
         /* Exact Screenshot Colorway & High Contrast Reset */
         * {
             margin: 0;
@@ -18,11 +13,15 @@
             font-family: 'Segoe UI', Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #000000; /* Pure Black Background */
             color: #ffffff;            /* High Contrast White Text */
             line-height: 1.6;
-            overflow-x: hidden;        /* Prevents iPhone Safari sideways layout glitch */
+            overflow-x: hidden;        /* Strict defense against side-scrolling glitch */
         }
 
         /* Top Navigation Header matching your image layout */
@@ -69,9 +68,9 @@
             color: #d4af37;
         }
 
-        /* Tightened Hero Layout: Removed huge vertical padding */
+        /* Balanced, Clean Hero Section */
         .hero {
-            padding: 5rem 5% 4rem 5%; /* Significantly tighter spacing below header */
+            padding: 6rem 5%; /* Tight, professional gap below header */
             text-align: center;
             max-width: 1000px;
             margin: 0 auto;
@@ -174,8 +173,9 @@
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            flex-wrap: wrap;
+            flex-wrap: wrap; /* Automatically drops lines if mobile viewport fills up */
             margin-top: 3rem;
+            width: 100%;
         }
 
         .tag {
@@ -187,6 +187,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             border: 2px solid #d4af37;
+            display: inline-block;
         }
 
         /* Industry Seasoned Compliance verification block */
@@ -205,7 +206,7 @@
             text-align: center;
         }
 
-        /* Mobile-Optimized Email Wrapper */
+        /* Mobile-Safe Email Wrapper */
         .email-box {
             display: inline-block;
             margin-top: 2rem;
@@ -217,8 +218,8 @@
             letter-spacing: 1px;
             user-select: text;
             cursor: default;
-            max-width: 100%;       /* Prevents stretching past mobile screens */
-            word-wrap: break-word;  /* Clean text wrap if device is ultra narrow */
+            max-width: 100%;
+            word-wrap: break-word;
         }
 
         footer {
@@ -231,30 +232,20 @@
             letter-spacing: 0.5px;
         }
 
-        /* Mobile Viewport Scaling Fixes */
+        /* Strict Responsive Layout Controls */
         @media (max-width: 768px) {
             nav {
-                padding: 1.25rem 5%;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .logo {
-                font-size: 1rem; /* Marginally scaled to allow nav links room in the corner */
-                letter-spacing: 1px;
+                padding: 1.5rem 5%;
+                justify-content: center; /* Perfectly centers your logo on mobile screen widths */
             }
             .nav-links { 
-                display: flex; /* Retained in the top right corner identical to desktop */
-                gap: 1rem;     /* Snug mobile layout spacing */
-            }
-            .nav-links a {
-                font-size: 0.7rem; /* Readable but micro-sized to fit iPhone Safari viewports */
-                letter-spacing: 0.5px;
+                display: none; /* Safely hides mobile menu block to prevent alignment clipping */
             }
             .hero {
-                padding: 3.5rem 5% 3.5rem 5%; /* Closed up the large layout gap below your header */
+                padding: 4rem 5%; /* Tight centered header layout */
             }
             .hero h1 { 
-                font-size: 2rem; /* Scaled down perfectly for mobile viewports */
+                font-size: 2.1rem; /* Fits full screen width without breaks */
             }
             .hero p {
                 font-size: 1.05rem;
@@ -262,9 +253,19 @@
             .section-header h2 {
                 font-size: 1.8rem;
             }
+            .location-tags {
+                flex-direction: column; /* Force clean vertical stack layout on small screens */
+                align-items: center;
+                gap: 1rem;
+            }
+            .tag {
+                width: 80%; /* Consistent centered block style elements */
+                padding: 0.85rem 0;
+                font-size: 1rem;
+            }
             .email-box {
-                font-size: 1rem; /* Scales text down seamlessly on Safari mobile screens */
-                padding: 1.25rem 1.5rem;
+                font-size: 0.95rem; /* Clean inline text fitting for Safari mobile viewports */
+                padding: 1rem 1.25rem;
             }
         }
     </style>
@@ -280,7 +281,7 @@
         </ul>
     </nav>
 
-    <!-- Main Value Hero with Tightened Margins -->
+    <!-- Main Value Hero -->
     <section class="hero">
         <h1>Guaranteed Rent. <span>Premium Corporate Housing.</span></h1>
         <p>We solve landlord void periods by securing high-end corporate lets for contractors, business operators, and relocating working professionals across our premium network.</p>
@@ -316,3 +317,8 @@
         </div>
         <div class="location-tags">
             <div class="tag">Sheffield</div>
+            <div class="tag">Derby</div>
+            <div class="tag">Manchester</div>
+        </div>
+    </section>
+
