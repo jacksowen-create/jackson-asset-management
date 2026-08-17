@@ -6,20 +6,20 @@
     <title>Jackson Asset Management | Corporate Housing Solutions</title>
     <style>
         :root {
-            --slate-black: #0F1115; /* Ultra premium dark foundation */
-            --charcoal-grey: #1C1F26; /* Contrast sections */
-            --brushed-gold: #D4AF37; /* Trust, premium authority color */
+            --slate-black: #0F1115; /* Premium Institutional Foundation */
+            --charcoal-grey: #1C1F26; /* Bento Box Backgrounds */
+            --brushed-gold: #D4AF37; /* Corporate Trust Highlight */
             --muted-gold: #AA841B;
             --pure-white: #FFFFFF;
             --text-body: #94A3B8;
-            --border-color: rgba(212, 175, 55, 0.15);
+            --border-gold: rgba(212, 175, 55, 0.2);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             scroll-behavior: smooth;
         }
 
@@ -29,11 +29,11 @@
             overflow-x: hidden;
         }
 
-        /* Premium Floating Navigation Header */
+        /* Fixed Navigation Header */
         header {
-            background-color: rgba(15, 17, 21, 0.9);
+            background-color: rgba(15, 17, 21, 0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-gold);
             padding: 1.25rem 8%;
             position: sticky;
             top: 0;
@@ -49,7 +49,7 @@
         }
 
         .logo {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 800;
             letter-spacing: 2px;
             color: var(--pure-white);
@@ -66,27 +66,29 @@
             text-decoration: none;
             margin-left: 2.5rem;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: var(--brushed-gold);
         }
 
-        /* Cinematic Video Hero Section */
-        .hero-section {
+        /* Cinema Quality Looping Background Showcase */
+        .hero-viewport {
             position: relative;
-            height: 85vh;
+            height: 75vh;
             display: flex;
             align-items: center;
             padding: 0 8%;
+            background-color: #050709;
             overflow: hidden;
         }
 
-        .hero-video-bg {
+        /* High-Definition Architecture Loop - Guaranteed Cross-Browser Delivery */
+        .hero-video-render {
             position: absolute;
             top: 0;
             left: 0;
@@ -94,51 +96,54 @@
             height: 100%;
             object-fit: cover;
             z-index: 1;
-            opacity: 0.35; /* Blends flawlessly into dark mode background */
+            opacity: 0.35;
         }
 
-        .hero-overlay {
+        .hero-shading-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, rgba(15,17,21,0.95) 40%, rgba(15,17,21,0.4) 100%);
+            background: linear-gradient(to right, rgba(15,17,21,0.98) 35%, rgba(15,17,21,0.5) 100%);
             z-index: 2;
         }
 
-        .hero-content {
+        .hero-text-stack {
             position: relative;
             z-index: 3;
-            max-width: 800px;
+            max-width: 850px;
         }
 
-        .geo-tag {
+        .market-badge {
             color: var(--brushed-gold);
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             letter-spacing: 3px;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             display: inline-block;
+            border: 1px solid var(--border-gold);
+            padding: 0.35rem 0.75rem;
+            background: rgba(212, 175, 55, 0.05);
         }
 
-        .hero-content h1 {
+        .hero-text-stack h1 {
             font-size: 3.5rem;
             font-weight: 900;
             line-height: 1.15;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
             margin-bottom: 1.5rem;
         }
 
-        .hero-content p {
+        .hero-text-stack p {
             font-size: 1.2rem;
             color: var(--text-body);
             margin-bottom: 2.5rem;
             line-height: 1.6;
         }
 
-        .btn-premium {
+        .action-link-gold {
             background: linear-gradient(135deg, var(--brushed-gold) 0%, var(--muted-gold) 100%);
             color: var(--slate-black);
             padding: 1.1rem 2.5rem;
@@ -147,91 +152,91 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
             transition: all 0.3s ease;
             display: inline-block;
         }
 
-        .btn-premium:hover {
+        .action-link-gold:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.35);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
         }
 
-        /* Premium Bento Grid Portfolio & Strategy Section */
-        .main-container {
+        /* Corporate Architecture Bento Grid */
+        .content-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 7rem 8%;
+            padding: 6rem 8%;
         }
 
-        .section-header {
-            margin-bottom: 4rem;
+        .heading-block {
+            margin-bottom: 4.5rem;
         }
 
-        .section-header h2 {
-            font-size: 2.5rem;
+        .heading-block h2 {
+            font-size: 2.25rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
-        .section-header p {
+        .heading-block p {
             color: var(--brushed-gold);
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 2px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
-        .bento-grid {
+        .bento-layout {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .bento-card {
+        .bento-item {
             background-color: var(--charcoal-grey);
-            border: 1px solid rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.02);
             padding: 3rem;
             border-radius: 4px;
-            transition: border 0.3s;
+            transition: border-color 0.3s;
         }
 
-        .bento-card:hover {
+        .bento-item:hover {
             border-color: var(--brushed-gold);
         }
 
-        .bento-card.wide {
+        .bento-item.span-two {
             grid-column: span 2;
         }
 
-        .bento-card h3 {
-            font-size: 1.5rem;
+        .bento-item h3 {
+            font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             color: var(--pure-white);
         }
 
-        .bento-card h3 span {
+        .bento-item h3 span {
             color: var(--brushed-gold);
         }
 
-        .bento-card p {
+        .bento-item p {
             color: var(--text-body);
-            font-size: 1.05rem;
+            font-size: 1rem;
             line-height: 1.6;
         }
 
-        /* Strict Compliance Anchor Bar */
-        .compliance-bar {
-            background-color: #14171D;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+        /* Strict Regulatory & Governance Banner */
+        .regulatory-panel {
+            background-color: #13151A;
+            border-top: 1px solid var(--border-gold);
+            border-bottom: 1px solid var(--border-gold);
             padding: 5rem 8%;
         }
 
-        .compliance-wrapper {
+        .regulatory-wrapper {
             max-width: 1400px;
             margin: 0 auto;
             display: flex;
@@ -240,46 +245,43 @@
             gap: 4rem;
         }
 
-        .compliance-text {
-            max-width: 600px;
-        }
-
-        .compliance-text h2 {
+        .regulatory-text h2 {
             font-size: 2rem;
             font-weight: 800;
             margin-bottom: 1rem;
         }
 
-        .compliance-text p {
+        .regulatory-text p {
             color: var(--text-body);
-            font-size: 1rem;
+            font-size: 1.05rem;
+            max-width: 600px;
         }
 
-        .framework-badges {
+        .governance-badges {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
-        .badge-item {
+        .badge-element {
             background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.04);
             padding: 1.25rem;
             border-left: 3px solid var(--brushed-gold);
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        /* Institutional Contact Footer */
+        /* Institutional Footprint & Communication Channels */
         footer {
             background-color: var(--slate-black);
             padding: 6rem 8% 3rem 8%;
-            border-top: 1px solid rgba(255,255,255,0.02);
+            border-top: 1px solid rgba(255,255,255,0.01);
         }
 
-        .footer-grid {
+        .footer-layout {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
@@ -288,35 +290,35 @@
             padding-bottom: 4rem;
         }
 
-        .footer-brand h2 {
-            font-size: 1.8rem;
+        .footer-identity h2 {
+            font-size: 1.6rem;
             font-weight: 900;
             margin-bottom: 1rem;
             letter-spacing: 1px;
         }
 
-        .footer-brand p {
+        .footer-identity p {
             color: var(--text-body);
-            max-width: 500px;
-            font-size: 1.05rem;
+            max-width: 550px;
+            font-size: 1rem;
             line-height: 1.6;
         }
 
-        .footer-contact h4 {
-            font-size: 0.9rem;
+        .footer-channel h4 {
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--brushed-gold);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
-        .footer-contact p {
+        .footer-channel p {
             font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
-        .copyright-bar {
+        .legal-row {
             max-width: 1400px;
             margin: 0 auto;
             border-top: 1px solid rgba(255,255,255,0.05);
@@ -328,10 +330,11 @@
         }
 
         @media (max-width: 1024px) {
-            .bento-grid { grid-template-columns: 1fr; }
-            .bento-card.wide { grid-column: span 1; }
-            .compliance-wrapper { flex-direction: column; align-items: flex-start; }
-            .footer-grid { grid-template-columns: 1fr; }
+            .bento-layout { grid-template-columns: 1fr; }
+            .bento-item.span-two { grid-column: span 1; }
+            .regulatory-wrapper { flex-direction: column; align-items: flex-start; }
+            .footer-layout { grid-template-columns: 1fr; }
+            .hero-text-stack h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -341,17 +344,13 @@
         <div class="nav-container">
             <div class="logo">Jackson <span>Asset Management</span></div>
             <nav>
-                <a href="#propositions">Partnerships</a>
-                <a href="#governance">Governance</a>
+                <a href="#propositions">Framework</a>
+                <a href="#governance">Compliance</a>
                 <a href="#corporate">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section leveraging premium background looping property stock -->
-    <section class="hero-section">
-        <video class="hero-video-bg" autoplay loop muted playsinline poster="https://unsplash.com">
-            <source src="https://mixkit.co" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
+    <!-- Video loop wrapper built to force continuous cross-device play state -->
+    <section class="hero-viewport">
+        <video class="hero-video-render" autoplay loop muted playsinline preload="auto">
