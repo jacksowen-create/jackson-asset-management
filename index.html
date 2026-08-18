@@ -5,248 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jackson Asset Management | Corporate Housing & Serviced Accommodation</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            line-height: 1.6;
-            overflow-x: hidden;
-            width: 100%;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2rem 5%;
-            background-color: #000000;
-            border-bottom: 1px solid #111111;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.35rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .logo span {
-            color: #d4af37;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: #d4af37;
-        }
-
-        .hero {
-            padding: 12rem 6% 9rem 6%;
-            text-align: center;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 span {
-            color: #d4af37;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #cccccc;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 500;
-        }
-
-        .services {
-            background-color: #050505;
-            padding: 6rem 6%;
-            border-top: 1px solid #111111;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-            padding: 0 5%;
-        }
-
-        .section-header p {
-            color: #d4af37;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #ffffff;
-            text-transform: uppercase;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background-color: #000000;
-            padding: 3rem 2rem;
-            border-radius: 4px;
-            border: 2px solid #111111;
-            transition: border-color 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: #d4af37;
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-bottom: 1.25rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .card p {
-            color: #aaaaaa;
-            font-size: 1rem;
-            font-weight: 400;
-        }
-
-        .locations {
-            padding: 6rem 6%;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .location-tags {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .tag {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 2px solid #d4af37;
-        }
-
-        .compliance-section {
-            background-color: #050505;
-            padding: 6rem 6%;
-            border-top: 1px solid #111111;
-            text-align: center;
-        }
-
-        .direct-contact {
-            background-color: #000000;
-            padding: 10rem 6%;
-            border-top: 1px solid #111111;
-            text-align: center;
-        }
-
-        /* --- REDESIGNED GLOBAL EMAIL BOX --- */
-        .email-box {
-            display: block;
-            margin: 2rem auto 0 auto;
-            border: 2px solid #d4af37;
-            padding: 1.25rem 5%;
-            color: #ffffff;
-            font-size: 1.35rem;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            user-select: text;
-            cursor: default;
-            max-width: 90%;
-            word-break: break-all;
-            white-space: normal;
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 6%;
-            font-size: 0.85rem;
-            color: #444444;
-            border-top: 1px solid #111111;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- STUBBORN MOBILE VIEW FIX --- */
-        @media screen and (max-width: 600px) {
-            .hero h1 { 
-                font-size: 2rem !important; 
-            }
-            .section-header h2 { 
-                font-size: 1.5rem !important; 
-            }
-            .email-box {
-                font-size: 4vw !important; /* Scales fluidly with screen width */
-                padding: 1rem 3% !important;
-                width: 92% !important;
-            }
-            .hero, .services, .locations, .compliance-section, .direct-contact {
-                padding-left: 6% !important;
-                padding-right: 6% !important;
-            }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #000; color: #fff; line-height: 1.6; overflow-x: hidden; width: 100%; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 5%; background-color: #000; border-bottom: 1px solid #111; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.35rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+        .logo span { color: #d4af37; }
+        .nav-links { display: flex; list-style: none; gap: 2.5rem; }
+        .nav-links a { color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px; font-weight: 700; transition: color 0.2s ease; }
+        .nav-links a:hover { color: #d4af37; }
+        .hero { padding: 12rem 5% 9rem 5%; text-align: center; max-width: 1000px; margin: 0 auto; }
+        .hero h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 1.5rem; line-height: 1.2; letter-spacing: -0.5px; text-transform: uppercase; }
+        .hero h1 span { color: #d4af37; }
+        .hero p { font-size: 1.25rem; color: #ccc; max-width: 800px; margin: 0 auto; font-weight: 500; }
+        .services { background-color: #050505; padding: 6rem 5%; border-top: 1px solid #111; }
+        .section-header { text-align: center; margin-bottom: 5rem; }
+        .section-header p { color: #d4af37; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 3px; font-weight: 700; margin-bottom: 0.5rem; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 800; color: #fff; text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto; }
+        .card { background-color: #000; padding: 3rem 2rem; border-radius: 4px; border: 2px solid #111; transition: border-color 0.3s ease; }
+        .card:hover { border-color: #d4af37; }
+        .card h3 { font-size: 1.4rem; color: #fff; margin-bottom: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card p { color: #aaa; font-size: 1rem; font-weight: 400; }
+        .locations { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .location-tags { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 3rem; }
+        .tag { background-color: #000; color: #fff; padding: 1rem 2.5rem; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; border: 2px solid #d4af37; }
+        .compliance-section { background-color: #050505; padding: 6rem 5%; border-top: 1px solid #111; text-align: center; }
+        .direct-contact { background-color: #000; padding: 10rem 5%; border-top: 1px solid #111; text-align: center; }
+        .email-box { display: inline-block; margin-top: 2rem; border: 2px solid #d4af37; padding: 1.5rem 3rem; color: #fff; font-size: 1.5rem; font-weight: 800; letter-spacing: 1px; text-decoration: none; max-width: 100%; }
+        footer { text-align: center; padding: 3rem; font-size: 0.85rem; color: #444; border-top: 1px solid #111; font-weight: 600; letter-spacing: 0.5px; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.2rem; } .nav-links { display: none; } }
+        @media (max-width: 480px) {
+            .hero { padding: 4rem 20px 2rem 20px !important; }
+            .services, .locations, .compliance-section { padding: 3rem 20px !important; }
+            .direct-contact { padding: 4rem 20px !important; }
+            .section-header { margin-bottom: 2rem !important; }
+            .location-tags { margin-top: 1.5rem !important; }
+            .section-header h2 { font-size: 1.6rem !important; padding: 0 10px !important; }
+            .email-box { font-size: 11px !important; padding: 1rem 15px !important; width: 90% !important; max-width: 290px !important; display: inline-block !important; white-space: nowrap !important; text-align: center !important; }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="logo">Jackson Asset <span>Management</span></div>
         <ul class="nav-links">
@@ -254,73 +53,30 @@
             <li><a href="#compliance">Operations</a></li>
         </ul>
     </nav>
-
     <section class="hero">
         <h1>Guaranteed Rent. <span>Premium Corporate Housing.</span></h1>
         <p>We solve landlord void periods by securing high-end corporate lets for contractors, business operators, and relocating working professionals across our premium network.</p>
     </section>
-
     <section id="framework" class="services">
-        <div class="section-header">
-            <p>Professional Operations</p>
-            <h2>The Corporate Letting Framework</h2>
-        </div>
+        <div class="section-header"><p>Professional Operations</p><h2>The Corporate Letting Framework</h2></div>
         <div class="grid">
-            <div class="card">
-                <h3>The Landlord Problem Solved</h3>
-                <p>We take complete operational control of properties under fixed long-term agreements. Landlords receive 100% guaranteed monthly rent, zero tenant-finding fees, and completely hands-off asset upkeep.</p>
-            </div>
-            <div class="card">
-                <h3>Our Target Occupants</h3>
-                <p>We serve corporate clients, traveling field contractors, and blue-chip professionals needing premium Serviced Accommodation (SA). Every stay is fully vetted, monitored, and kept to executive standards.</p>
-            </div>
-            <div class="card">
-                <h3>Luxury Maintenance Model</h3>
-                <p>Properties are regularly deep-cleaned by our professional teams and kept in pristine showroom presentation. We manage internal minor wear-and-tear tasks at zero cost to the property owner.</p>
-            </div>
+            <div class="card"><h3>The Landlord Problem Solved</h3><p>We take complete operational control under fixed agreements with 100% guaranteed monthly rent and hands-off upkeep.</p></div>
+            <div class="card"><h3>Our Target Occupants</h3><p>We serve corporate clients and blue-chip professionals needing vetted, executive-standard serviced accommodation.</p></div>
+            <div class="card"><h3>Luxury Maintenance Model</h3><p>Properties are regularly deep-cleaned and kept in pristine showroom presentation with zero cost to owners.</p></div>
         </div>
     </section>
-
     <section class="locations">
-        <div class="section-header">
-            <p>Strategic Presence</p>
-            <h2>Key Regions of Operation</h2>
-        </div>
-        <div class="location-tags">
-            <div class="tag">Sheffield</div>
-            <div class="tag">Derby</div>
-            <div class="tag">Manchester</div>
-        </div>
+        <div class="section-header"><p>Strategic Presence</p><h2>Key Regions of Operation</h2></div>
+        <div class="location-tags"><div class="tag">Sheffield</div><div class="tag">Derby</div><div class="tag">Manchester</div></div>
     </section>
-
     <section id="compliance" class="compliance-section">
-        <div class="section-header">
-            <p>Professional Standards</p>
-            <h2>Accountable Real Estate Management</h2>
-        </div>
-        <div class="grid">
-            <div class="card" style="margin: 0 auto; max-width: 600px;">
-                <h3>Operational Best Practices</h3>
-                <p>Jackson Asset Management operates entirely within the UK data storage and independent property ombudsman processing frameworks. We maintain extensive corporate liability protections across all active contracts.</p>
-            </div>
-        </div>
+        <div class="section-header"><p>Professional Standards</p><h2>Accountable Real Estate Management</h2></div>
+        <div class="grid"><div class="card" style="margin: 0 auto; max-width: 600px;"><h3>Operational Best Practices</h3><p>Jackson Asset Management operates entirely within UK compliance and property ombudsman processing frameworks.</p></div></div>
     </section>
-
     <section class="direct-contact">
-        <div class="section-header">
-            <p>Direct Procurement</p>
-            <h2>Connect With Our Portfolio Management</h2>
-        </div>
-        <div class="email-box">
-            owen@jacksonassetmanagement.co.uk
-        </div>
+        <div class="section-header"><p>Direct Procurement</p><h2>Connect With Our Portfolio Management</h2></div>
+        <a href="mailto:owen@jacksonassetmanagement.co.uk" class="email-box">owen@jacksonassetmanagement.co.uk</a>
     </section>
-
-    <footer>
-        <p>&copy; 2026 JACKSON ASSET MANAGEMENT. ALL RIGHTS RESERVED. COMPANY PORTFOLIO OPERATIONS.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 JACKSON ASSET MANAGEMENT. ALL RIGHTS RESERVED.</p></footer>
 </body>
 </html>
-
-
